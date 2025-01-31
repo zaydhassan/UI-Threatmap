@@ -11,7 +11,8 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker-compose build
-      - docker tag frontend-ui:latest 881490102041.dkr.ecr.ap-south-1.amazonaws.com/threatmap-frontend-repo:latest
+      - docker images
+      - docker tag src_ui:latest 881490102041.dkr.ecr.ap-south-1.amazonaws.com/threatmap-frontend-repo:latest
   post_build:
     commands:
       - echo Build completed on `date`
